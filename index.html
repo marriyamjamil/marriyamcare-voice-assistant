@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MarriyamCare · Talk to Marriyam</title>
+  <meta name="description" content="Talk to Marriyam, the MarriyamCare AI skincare voice assistant." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-mark">✿</span>
+      <span class="brand-name">MarriyamCare</span>
+    </div>
+    <span class="tagline">AI Skincare Voice Assistant</span>
+  </header>
+
+  <main class="layout">
+    <!-- Voice panel -->
+    <section class="voice-panel">
+      <h1>Talk to <em>Marriyam</em></h1>
+      <p class="subtitle">Tell her about your skin, and she'll build the perfect routine for you.</p>
+
+      <div class="orb-wrap">
+        <div class="orb-ring" id="orbRing"></div>
+        <button class="orb" id="callBtn" aria-label="Start call">
+          <svg id="micIcon" viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/>
+            <path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="22"/>
+          </svg>
+          <svg id="endIcon" class="hidden" viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+            <line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/>
+          </svg>
+        </button>
+      </div>
+
+      <p class="status" id="status">Tap to start talking</p>
+
+      <div class="controls">
+        <button class="ctrl hidden" id="muteBtn">🎙️ Mute</button>
+      </div>
+
+      <div class="transcript" id="transcript" aria-live="polite">
+        <p class="empty">Your conversation will appear here.</p>
+      </div>
+    </section>
+
+    <!-- Products panel -->
+    <aside class="products-panel">
+      <h2>Bestsellers</h2>
+      <p class="hint">Ask Marriyam about any of these 👇</p>
+      <ul class="products" id="products"></ul>
+    </aside>
+  </main>
+
+  <footer class="footer">
+    Powered by <a href="https://vapi.ai" target="_blank" rel="noopener">Vapi</a> · Not medical advice. See a dermatologist for skin conditions.
+  </footer>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
